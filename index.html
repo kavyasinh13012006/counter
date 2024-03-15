@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h2>Counter App</h2>
+    </center>
+    <div class="container" style="margin:50px auto; width:500px; height:300px;">
+        <div class="flex" style="display: flex; align-items: center;">
+            <button onclick="decrement()"style="width:200px; height: 100px;  text-align: center; line-height:100px;  background-color:darkgreen;color:white; font-size:50px;border-radius:20px ">+</button>
+            <h1 id="msg" style="width:200px; height: 100px; background-color:rgba(244, 165, 96, 0.522); text-align: center; line-height:100px; margin:40px 20px;border-radius:20px"></h1>
+            <button onclick="increment()"style="width:200px; height: 100px;  text-align: center; line-height:100px;  background-color:darkgreen;color:white; font-size:50px;border-radius:20px ">-</button>
+        </div>
+        <center>
+            <button onclick="reseat()"style="width:200px; height: 100px;  text-align: center; line-height:100px;  background-color:darkgreen;color:white; font-size:30px; border-radius:20px">reseat</button>
+        </center>
+    </div>
+</body>
+<script type="text/javascript">
+    let cnt = 0;
+    document.getElementById('msg').innerHTML = ` ${cnt}`;
+
+    const decrement = () => {
+        cnt++;
+        document.getElementById('msg').innerHTML = `${cnt}`;
+    }
+
+    const increment = () => {
+        if (cnt > 0) {
+            cnt--;
+            document.getElementById('msg').innerHTML = ` ${cnt}`;
+        }
+    }
+
+    const reseat = () => {
+        cnt = 0;
+        document.getElementById('msg').innerHTML = ` ${cnt}`;
+    }
+</script>
+
+</html>
